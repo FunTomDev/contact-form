@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/favicon-32x32.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Contact form</title>
+</head>
+<body>
+    <main>
+        <div class="container bg-neutral-100">
+            <h1 class="text-neutral-900 fw-bold fs-700 ff-heading">Contact Us</h1>
+            <form action="" class="form-block text-neutral-900">
+                <div class="first-name">
+                    <label for="first-name">First Name</label>
+                    <input class="input-height-50" type="text">
+                </div>
+                <div class="last-name">
+                    <label for="last-name">Last Name</label>
+                    <input class="input-height-50" type="text">
+                </div>
+                <div class="email grid-col-span-2">
+                    <label for="email">Email Address</label>
+                    <input class="input-height-50" type="email">
+                </div>
+                <div class="query-type grid-col-span-2">
+                    <label for="query-type">Query Type</label>
+                    <div class="radio-block">
+                        <div><input type="radio" name="query" id="general"><label for="general" class="radio-label">General Enquiry</label></div>
+                        <div><input type="radio" name="query" id="request"><label for="request" class="radio-label">Support Request</label></div>
+                    </div>
+                    
+                </div>
+                <div class="message grid-col-span-2">
+                    <label for="message">Message</label>
+                    <input type="text" name="message" id="message">
+                </div>
+                <div class="consent grid-col-span-2">
+                    <div><input type="checkbox" name="consent" id="consent"><label for="consent" class="consent-label">I consent to being contacted by the team</label></div>
+                </div>
+                <div class="submit-button grid-col-span-2">
+                    <input class="input-height-50" type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
