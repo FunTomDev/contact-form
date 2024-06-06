@@ -18,7 +18,7 @@
     <main>
         <div class="container bg-neutral-100">
             <h1 class="text-neutral-900 fw-bold fs-700 ff-heading">Contact Us</h1>
-            <form action="" class="form-block text-neutral-900">
+            <form class="form-block text-neutral-900" onsubmit="formValidator(this)">
                 <div class="first-name">
                     <label for="first-name">First Name</label>
                     <input class="input-height-50" type="text">
@@ -34,17 +34,17 @@
                 <div class="query-type grid-col-span-2">
                     <label for="query-type">Query Type</label>
                     <div class="radio-block">
-                        <div><input type="radio" name="query" id="general"><label for="general" class="radio-label">General Enquiry</label></div>
-                        <div><input type="radio" name="query" id="request"><label for="request" class="radio-label">Support Request</label></div>
+                        <div><input type="radio" name="query" id="general"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" fill="none" viewBox="0 0 20 21"><path fill="#0C7D69" d="M10 .75a9.75 9.75 0 1 0 9.75 9.75A9.76 9.76 0 0 0 10 .75Zm0 18a8.25 8.25 0 1 1 8.25-8.25A8.26 8.26 0 0 1 10 18.75Zm5.25-8.25a5.25 5.25 0 1 1-10.499 0 5.25 5.25 0 0 1 10.499 0Z"/></svg><label for="general" class="radio-label">General Enquiry</label></div>
+                        <div><input type="radio" name="query" id="request"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" fill="none" viewBox="0 0 20 21"><path fill="#0C7D69" d="M10 .75a9.75 9.75 0 1 0 9.75 9.75A9.76 9.76 0 0 0 10 .75Zm0 18a8.25 8.25 0 1 1 8.25-8.25A8.26 8.26 0 0 1 10 18.75Zm5.25-8.25a5.25 5.25 0 1 1-10.499 0 5.25 5.25 0 0 1 10.499 0Z"/></svg><label for="request" class="radio-label">Support Request</label></div>
                     </div>
                     
                 </div>
                 <div class="message grid-col-span-2">
                     <label for="message">Message</label>
-                    <input type="text" name="message" id="message">
+                    <textarea name="message" id="message"></textarea>
                 </div>
-                <div class="consent grid-col-span-2">
-                    <div><input type="checkbox" name="consent" id="consent"><label for="consent" class="consent-label">I consent to being contacted by the team</label></div>
+                <div class="consent-block grid-col-span-2">
+                    <div><input type="checkbox" name="consent" id="consent" class="consent-input"><label for="consent" class="consent-label">I consent to being contacted by the team</label></div>
                 </div>
                 <div class="submit-button grid-col-span-2">
                     <input class="input-height-50" type="submit" value="Submit">
@@ -53,4 +53,5 @@
         </div>
     </main>
 </body>
+<script src="main.js"></script>
 </html>
