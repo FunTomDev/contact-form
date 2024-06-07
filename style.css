@@ -196,7 +196,7 @@ main{
 
             border-radius: 10px;
 
-            &[type='submit']{
+            &[type='button']{
                 background-color: var(--clr-primary-600);
                 border: none;
                 color: var(--clr-primary-200);
@@ -210,7 +210,7 @@ main{
                 padding: 0 1.5rem;
             }
 
-            &:not([type="submit"]){
+            &:not([type="button"]){
 
                 outline: none;
 
@@ -250,7 +250,7 @@ main{
             display: flex;
             flex-direction: column;
 
-            gap: 1rem;
+            gap: .5rem;
         }
 
         .radio-block{
@@ -365,6 +365,18 @@ main{
             
     }
 
+}
+
+.fill-error{
+    color: var(--clr-accent-600);
+}
+
+.invisible{
+    display: none;
+}
+
+.invalid{
+    border: 1px solid var(--clr-accent-600) !important;
 }
 
 @media (min-width: 35rem){
