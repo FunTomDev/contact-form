@@ -156,21 +156,21 @@ body{
 }
 
 main{
-    width: 100%;
+
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
     padding: 1rem;
 }
 
 .container{
-    width: 736px;
-    height: 100%;
+    width: min(736px, 100%);
 
-    padding: 40px;
+    padding: 1.5rem;
 
-    border-radius: 20px;
+    border-radius: 1rem;
 
     form{
 
@@ -194,7 +194,7 @@ main{
 
             cursor: pointer;
 
-            border-radius: 10px;
+            border-radius: 0.5rem;
 
             &[type='button']{
                 background-color: var(--clr-primary-600);
@@ -234,7 +234,7 @@ main{
 
             resize: none;
 
-            border-radius: 10px;
+            border-radius: .5rem;
 
             outline: none;
 
@@ -273,7 +273,7 @@ main{
 
 
                 border: 1px solid var(--clr-neutral-500);
-                border-radius: 10px;
+                border-radius: .5rem;
 
                 &, *{
                     cursor: pointer;
@@ -372,11 +372,41 @@ main{
 }
 
 .invisible{
-    display: none;
+    opacity: 0;
 }
 
 .invalid{
     border: 1px solid var(--clr-accent-600) !important;
+}
+
+.success-block{
+
+    background-color: var(--clr-neutral-900);
+    color: var(--clr-neutral-100);
+
+    padding: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: .75rem;
+
+    border-radius: 1rem;
+
+    min-width: 120px;
+
+    top: 10px;
+
+    /* opacity: 0; */
+
+    div{
+        display: flex;
+    }
+
+    p{
+        color: var(--clr-primary-200);
+        font-size: var(--fs-400);
+    }
+
 }
 
 @media (min-width: 35rem){
@@ -385,17 +415,29 @@ main{
         min-height: 100%;
     }
 
+    .success-block{
+    
+        width: 450px;
+    
+    }
+
     .grid-col-span-2{
         grid-column: span 2;
     }
 
     .container{
+
+        padding: 2.5rem;
+
         height: auto;
+
         form{
             grid-template-columns: 1fr 1fr;
 
             input[name='message']{
+
                 min-height: 100px;
+
             }
 
             .radio-block{

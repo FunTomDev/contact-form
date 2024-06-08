@@ -16,22 +16,32 @@
 </head>
 <body>
     <main>
+        <div class="success-block invisible">
+            <div class="success-heading-block">
+                <img src="./src/icon-success-check.svg" alt="icon-success-check"><h2>Message Sent!</h2>
+            </div>
+            <div class="success-text-block">
+                <p>Thanks for completing the form. We'll be in touch soon!</p>
+            </div>
+            
+    
+        </div>
         <div class="container bg-neutral-100">
             <h1 class="text-neutral-900 fw-bold fs-700 ff-heading">Contact Us</h1>
             <form class="form-block text-neutral-900">
                 <div class="first-name">
                     <label for="first-name">First Name</label>
-                    <input class="input-height-50" type="text">
+                    <input class="input-height-50" type="text" onchange="removeWarning(this)">
                     <span class="fill-error invisible">This field is required</span>
                 </div>
                 <div class="last-name">
                     <label for="last-name">Last Name</label>
-                    <input class="input-height-50" type="text">
+                    <input class="input-height-50" type="text" onchange="removeWarning(this)">
                     <span class="fill-error invisible">This field is required</span>
                 </div>
                 <div class="email grid-col-span-2">
                     <label for="email">Email Address</label>
-                    <input class="input-height-50" type="email">
+                    <input class="input-height-50" type="email" onchange="removeWarning(this)">
                     <span class="fill-error invisible">Please enter a valid email address</span>
                 </div>
                 <div class="query-type grid-col-span-2">
@@ -45,15 +55,15 @@
                 </div>
                 <div class="message grid-col-span-2">
                     <label for="message">Message</label>
-                    <textarea name="message" id="message"></textarea>
+                    <textarea name="message" id="message" onchange="removeWarning(this)"></textarea>
                     <span class="fill-error invisible">This field is required</span>
                 </div>
                 <div class="consent-block grid-col-span-2">
-                    <div><input type="checkbox" name="consent" id="consent" class="consent-input"><label for="consent" class="consent-label">I consent to being contacted by the team</label></div>
+                    <div><input type="checkbox" name="consent" id="consent" class="consent-input" onchange="removeWarning(this)"><label for="consent" class="consent-label">I consent to being contacted by the team</label></div>
                     <span class="fill-error invisible">To submit this form, please consent to being contacted</span>
                 </div>
                 <div class="submit-button grid-col-span-2">
-                    <input class="input-height-50" type="button" value="Submit" onclick="formValidator(this)">
+                    <input class="input-height-50" type="button" value="Submit" onclick="formValidator()">
                 </div>
             </form>
         </div>
