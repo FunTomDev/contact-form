@@ -127,15 +127,41 @@ function formValidator(){
 
     if(isValid){
 
-        let successBlock = document.querySelector('.success-block')
+        let successBlock = `
+        <div class="success-block invisible">
+            <div class="success-heading-block">
+                <img src="./src/icon-success-check.svg" alt="icon-success-check"><h2>Message Sent!</h2>
+            </div>
+            <div class="success-text-block">
+                <p>Thanks for completing the form. We'll be in touch soon!</p>
+            </div>
+        </div>`
 
-        successBlock.classList.remove("invisible")
+        let mainBlock = document.querySelector("main")
+        mainBlock.innerHTML = successBlock + mainBlock.innerHTML
+
+        setTimeout(() =>{
+            document.querySelector('.radio-div-input-checked').classList.remove('radio-div-input-checked')
+        }, 10)
+        
+        setTimeout(() => {
+            document.querySelector(".success-block").classList.remove("invisible")
+        }, 10)
 
     }
 
 }
 
 function removeWarning(item){
+
+    if(document.querySelector("main .success-block") !== null){
+        document.querySelector("main .success-block").classList.add("invisible")
+        setTimeout(() =>{
+            document.querySelector("main").firstElementChild.remove()}
+            , 300)
+        
+    }
+
     if(item.name === 'consent'){
         item.parentElement.parentElement.querySelector("span").classList.add('invisible')
         item.classList.remove("invalid")
